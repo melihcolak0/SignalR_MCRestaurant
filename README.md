@@ -101,17 +101,14 @@ Projede genel anlamda 2 farklı bölüm bulunmaktadır;
 <div align="center">
   <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_Setting_Index.jpg" alt="image alt">
 </div>
+
+### :triangular_flag_on_post: Kayıt, Giriş ve Hata Sayfaları
 <div align="center">
-  <img src="" alt="image alt">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/2c08e9be58cb9349465440a0af06bc167f1d9b25/ss2/register.jpg" alt="image alt">
 </div>
 <div align="center">
-  <img src="" alt="image alt">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/2c08e9be58cb9349465440a0af06bc167f1d9b25/ss2/login.jpg" alt="image alt">
 </div>
 <div align="center">
-  <img src="" alt="image alt">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/2c08e9be58cb9349465440a0af06bc167f1d9b25/ss2/page404.jpg" alt="image alt">
 </div>
-
-
-
-
-
