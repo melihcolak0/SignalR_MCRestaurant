@@ -20,21 +20,98 @@ Bu projede değiştirilmesi gereken bazı noktalar olabilir fakat burada asıl a
 
 Projede genel anlamda 2 farklı bölüm bulunmaktadır;
 
-1- Vitrin Paneli: Burada da M&C Restoranınile ilgili olarak firma hakkında bilgilerin, rezervasyon bölümünün, sipariş bölümünün, iletişim bölümünün yer aldığı paneldir.
+1- Vitrin Paneli: Burada da M&C Restoranınile ilgili olarak firma hakkında bilgilerin, rezervasyon bölümünün, sipariş bölümünün, iletişim bölümünün yer aldığı paneldir.<br/>
 2- Admin Paneli: Adminler'in giriş yapıp kategoriler, ürünler, rezervasyonlar, iletişim gibi alanlar ile ilgili CRUD (Create, Read, Update, Delete) işlemlerinin yaptığı paneldir.  
 
 
-## :arrow_forward: Vitrin Paneli
-Bu eğitimde ilk olarak vitrin panelini oluşturdum. Her misafir bu sayfayı herhangi bir giriş işlemi yapmadan görüntüleyebilir. Bu sayfada rezervasyon, sipariş ve iletişim gibi işlemleri yapabilir. Genel anlamda bu sayfa Ana Sayfa, Menü, Tarifler, Masalar, Rezervasyon ve İletişim ve Sepet bölümlerinden oluşmaktadır.
+## :arrow_forward: Projeden Ekran Görüntüleri
 
-### :triangular_flag_on_post: Ana Sayfa Bölümü
-Ana Sayfa bölümünde misafirler, günün indirimlerini, öne çıkan ürünleri, firma hakkında bilgileri, firmaya mesaj göndermeyi ve geçmiş misafirlerin yorumlarını görüntüleyebilir.
-
-Burada resimleri doğrudan açıklamasız koy portfolio cpre gibi bak. sornasında da resimleri ekle.
-
+### :triangular_flag_on_post: Vitrin Paneli
 <div align="center">
-  <img src="https://github.com/melihcolak0/Traversal_Core/blob/c00bd4d6fd8d8fcfe7b60a96ca49e62df14e1776/ss/vitrineHome1.jpg" alt="image alt">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_Default_Index.png" alt="image alt">
 </div>
 <div align="center">
-  <img src="https://github.com/melihcolak0/Traversal_Core/blob/c00bd4d6fd8d8fcfe7b60a96ca49e62df14e1776/ss/vitrineHome2.jpg" alt="image alt">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_UIMenu_Index.png" alt="image alt">
 </div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_UIRecipe_Index.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_UIRestaurantTable_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_UIBookATable_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_UIMessage_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_UIBasket_Index.jpg" alt="image alt">
+</div>
+
+### :triangular_flag_on_post: Admin Paneli
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_ProgressBars_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_Category_Index.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_Product_Index.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_Booking_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_About_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_Discount_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_Slider_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_Testimonial_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_SocialMedia_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_Contact_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_Statistics_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_Notification_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_RestaurantTable_Index.png" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_RestaurantTable_TableListByStatus.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_QRCode_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_Mail_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="https://github.com/melihcolak0/SignalR_MCRestaurant/blob/a9ff7b1ccd5619ef8219d91a7fd1c8c7f0b4e079/ss/localhost_7076_Setting_Index.jpg" alt="image alt">
+</div>
+<div align="center">
+  <img src="" alt="image alt">
+</div>
+<div align="center">
+  <img src="" alt="image alt">
+</div>
+<div align="center">
+  <img src="" alt="image alt">
+</div>
+
+
+
+
+
