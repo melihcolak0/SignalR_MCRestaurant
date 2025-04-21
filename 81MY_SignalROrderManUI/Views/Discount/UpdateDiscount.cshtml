@@ -1,0 +1,45 @@
+﻿@model UpdateDiscountDto
+@{
+    ViewData["Title"] = "UpdateDiscount";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">İndirim Alanı İşlemleri</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">İndirim Alanı Güncelleme</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>İndirim Alanı Id</label>
+                                <input type="text" asp-for="DiscountId" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Ürün Adı</label>
+                                <input type="text" asp-for="Title" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>İndirim Oranı</label>
+                                <input type="text" asp-for="Amount" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Ürün Görseli</label>
+                                <input type="text" asp-for="ImageUrl" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Açıklama</label>
+                                <input type="text" asp-for="Description" class="form-control">
+                            </div>
+                            <br />
+                            <button class="btn btn-primary">Güncelle</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

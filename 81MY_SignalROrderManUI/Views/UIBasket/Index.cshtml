@@ -1,0 +1,197 @@
+﻿@model List<ResultBasketDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index2.cshtml";
+}
+@{
+    int counter = 0;
+}
+<div class="hero_area">
+    <div class="bg-box">
+        <img src="/feane-1.0.0/images/hero-bg.jpg" alt="">
+    </div>
+    @await Component.InvokeAsync("_UINavBarComponent")
+</div>
+<br />
+<br />
+<!-- Sayfa Breadcrumb -->
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-12">
+            <nav class="breadcrumb bg-secondary-subtle py-3 px-4 rounded mb-4">
+                <a class="breadcrumb-item text-muted" href="/Default/Index">Ana Sayfa</a>
+                <a class="breadcrumb-item text-muted" href="/UIMenu/Index">Menü</a>
+                <span class="breadcrumb-item active text-dark fw-bold">Sepetiniz</span>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- Sepet İçeriği -->
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <!-- Sepet Tablosu -->
+        <div class="col-md-7">
+            <div class="card shadow-sm rounded-4 h-100">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">Sepetiniz</h5>
+                </div>
+                <div class="table-responsive p-3">
+                    <table class="table table-bordered text-center align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>#</th>
+                                <th>Ürün</th>
+                                <th>Adet</th>
+                                <th>Fiyat</th>
+                                <th>Toplam</th>
+                                <th>Sil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                counter++;
+                                
+                                <tr>
+                                    <td>@counter</td>
+                                    <td>@item.ProductName</td>
+                                    <td>@item.Count</td>
+                                    <td>$ @item.Price</td>
+                                    <td>$ @item.TotalPrice</td>
+                                    <td>
+                                        <a href="/UIBasket/DeleteBasket/@item.BasketId" class="btn btn-sm btn-outline-danger">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Kupon Kodu</label>
+                <div class="input-group">
+                    <input type="text" id="couponcode" class="form-control rounded-start" placeholder="Kupon kodunu girin">
+                    <button class="btn btn-outline-primary" id="btncouponcode" style="margin-left:15px">Uygula</button>
+                </div>
+            </div>
+            <div class="card shadow-sm border rounded">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">Sepet Özeti</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Ürünlerin Toplam Tutarı</span>
+                        <span>$ @ViewBag.TotalPrice</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>KDV (%8)</span>
+                        <span>$ @ViewBag.Tax</span>
+                    </div>
+                    <div class="d-flex justify-content-between text-danger mb-2">
+                        <span>İndirim</span>
+                        <span>$ -0,00</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold fs-5">
+                        <span>Toplam Tutar</span>
+                        <span>$ @ViewBag.TotalPriceWithTax</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3 d-flex justify-content-end">
+                <button class="btn btn-outline-success">Siparişi Tamamla</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+@* <div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-12">
+            <nav class="breadcrumb bg-dark mb-30">
+                <a class="breadcrumb-item text-white-50" href="/Default/Index">Ana Sayfa</a>
+                <a class="breadcrumb-item text-white-50" href="/UIMenu/Index">Menü</a>
+                <span class="breadcrumb-item text-white active">Sepetiniz</span>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-md-6">
+            <div class="table-responsive">
+                <table class="table table-bordered text-center" style="border-radius: 12px; overflow: hidden;">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Ürün</th>
+                            <th>Adet</th>
+                            <th>Fiyat</th>
+                            <th>Toplam</th>
+                            <th>Sil</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle">
+                        @foreach(var item in Model)
+                        {
+                            <tr>
+                                <td class="align-middle">@item.BasketId</td>
+                                <td class="align-middle">@item.ProductName</td>
+                                <td class="align-middle">@item.Count</td>
+                                <td class="align-middle">@item.Price</td>
+                                <td class="align-middle">@item.TotalPrice</td>
+                                <td class="align-middle"><button data-basketid="@item.BasketId" id="btndeletebasketbyid" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td>
+                            </tr>
+                        }      
+                    </tbody>
+                </table>
+                <div class="text-end">
+                    <h5>Genel Toplam: <span id="totalPrice">₺0</span></h5>
+                    <br />
+                    <button class="btn btn-success">Siparişi Tamamla</button>
+                </div>
+                <br />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <form>
+                <div class="input-group">
+                    <input type="text" id="couponcode" class="form-control border-1 p-4" placeholder="Kupon Kodu"/>
+                    <div>
+                        <a style="height:48px; padding-top:11px; margin-left:5px;" class="btn btn-info" id="btncouponcode">Kuponu Uygula</a>
+                    </div>
+                </div>
+            </form>
+            <br />
+            <div class="card shadow-sm border rounded">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">Sepet Özeti</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <span>Ürünlerin Toplam Tutarı</span>
+                        <span>200₺</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>KDV Oranı</span>
+                        <span>20₺</span>
+                    </div>
+                    <div class="d-flex justify-content-between text-danger">
+                        <span>İndirim</span>
+                        <span>-15₺</span>
+                    </div>
+                    <hr />
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span>Toplam Tutar</span>
+                        <span>205₺</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@

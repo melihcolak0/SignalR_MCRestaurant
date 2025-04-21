@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+<div class="hero_area">
+    <div class="bg-box">
+        <img src="/feane-1.0.0/images/hero-bg.jpg" alt="">
+    </div>
+    @await Component.InvokeAsync("_UINavBarComponent")
+    @await Component.InvokeAsync("_UISliderComponent")
+</div>
+@await Component.InvokeAsync("_UIOfferComponent")
+@await Component.InvokeAsync("_UIOurMenuComponent")
+@await Component.InvokeAsync("_UIAboutComponent")
+@* @await Component.InvokeAsync("_UIBookComponent") *@
+@await Html.PartialAsync("SendMessage.cshtml")
+@await Component.InvokeAsync("_UITestimonialComponent")

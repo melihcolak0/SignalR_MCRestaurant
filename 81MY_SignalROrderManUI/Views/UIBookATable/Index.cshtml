@@ -1,0 +1,67 @@
+﻿@model CreateBookingDto
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index2.cshtml";
+}
+<div class="hero_area">
+    <div class="bg-box">
+        <img src="/feane-1.0.0/images/hero-bg.jpg" alt="">
+    </div>
+    @await Component.InvokeAsync("_UINavBarComponent")
+</div>
+<section class="book_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>
+                Rezervasyon Oluşturun
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form_container">
+                    <form method="post">
+                        <div>
+                            <input type="text" class="form-control" placeholder="Adınız ve Soyadınız" asp-for="Name"/>
+                            <span asp-validation-for="Name" style="color: red"></span>
+                        </div>
+                        <div>
+                            <input type="text" class="form-control" placeholder="Telefon Numaranız" asp-for="Phone"/>
+                            <span asp-validation-for="Phone" style="color: red"></span>
+                        </div>
+                        <div>
+                            <input type="email" class="form-control" placeholder="E-Mail Adresiniz" asp-for="Mail"/>
+                            <span asp-validation-for="Mail" style="color: red"></span>
+                        </div>
+                        <div>
+                            <select class="form-control nice-select wide" asp-for="PersonCount">
+                                <option value="" disabled selected>
+                                    Kaç kişisiniz?
+                                </option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <span asp-validation-for="PersonCount" style="color: red"></span>
+                        </div>
+                        <div>
+                            <input type="date" class="form-control" asp-for="BookDate">
+                            <span asp-validation-for="BookDate" style="color: red"></span>
+                        </div>
+                        <div class="btn_box">
+                            <button>
+                                Rezervasyon Yap
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="map_container ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1505.7957959337841!2d29.027884838943617!3d40.9904230174224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9f0b8afbb1f%3A0x703cd0993370cf84!2zS2FkxLFrw7Z5IEJvxJ9hIEhleWtlbGk!5e0!3m2!1str!2str!4v1745085865226!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

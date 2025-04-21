@@ -1,0 +1,146 @@
+﻿@model List<ResultRestaurantTableDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index2.cshtml";
+    string color = "";
+    string status = "";
+    string icon = "";
+}
+
+<style>
+    .widgettrue {
+        width: 200px;
+        height: 100px;
+        background-color: darkgreen; /* Yeşil arka plan */
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        color: white;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .widgetfalse {
+        width: 200px;
+        height: 100px;
+        background-color: darkred; /* kırmızı arka plan */
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        color: white;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .widget-icon-true {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+        .widget-icon-true i {
+            font-size: 24px;
+            color: darkgreen;
+        }
+
+    .widget-icon-false {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+        .widget-icon-false i {
+            font-size: 24px;
+            color: darkred;
+        }
+
+    .widget-text {
+        margin-left: 20px;
+    }
+
+        .widget-text h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .widget-text p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+    .custom-col {
+        width: 12.5%; /* 100 / 8 = 12.5% */
+        float: left;
+        padding: 10px;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="hero_area">
+    <div class="bg-box">
+        <img src="/feane-1.0.0/images/hero-bg.jpg" alt="">
+    </div>
+    @await Component.InvokeAsync("_UINavBarComponent")
+</div>
+<br />
+<br />
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-12">
+            <nav class="breadcrumb bg-secondary-subtle py-3 px-4 rounded mb-4">
+                <a class="breadcrumb-item text-muted" href="/Default/Index">Ana Sayfa</a>
+                <span class="breadcrumb-item active text-dark fw-bold">Masa Listesi</span>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        @foreach (var item in Model)
+        {
+            if (item.Status)
+            {
+                color = "widgettrue";
+                status = "Masa Dolu";
+                icon = "widget-icon-true";
+            }
+            else
+            {
+                color = "widgetfalse";
+                status = "Masa Boş";
+                icon = "widget-icon-false";
+            }
+            <div class="col-md-2 mb-4">
+                <div class="@color">
+                    @if (item.Status)
+                    {
+                        <div class="@icon">
+                            <a href="/UIBasket/Index/@item.RestaurantTableId"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="@icon">
+                            <a href="/UIRestaurantTable/GoToMenu/@item.RestaurantTableId"><i class="fas fa-chair"></i></a>
+                        </div>
+                    }
+                    <div class="widget-text">
+                        <h3>@item.Name</h3>
+                        <p>@status</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<br />

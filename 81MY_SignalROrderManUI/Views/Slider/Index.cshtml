@@ -1,0 +1,56 @@
+﻿@model List<ResultSliderDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Öne Çıkan Alanı İşlemleri</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Öne Çıkan Alanı Listeleme</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-sub">
+                            Ana sayfa kayan ekranlar alanı ile ilgili işlemleri aşağıda gerçekleştirebilirisiniz.
+                        </div>
+                        <table class="table mt-3">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Başlık 1</th>
+                                    <th scope="col">Başlık 2</th>
+                                    <th scope="col">Başlık 3</th>
+                                    <th scope="col">Açıklama 1</th>
+                                    <th scope="col">Açıklama 2</th>
+                                    <th scope="col">Açıklama 3</th>
+                                    <th scope="col">Sil</th>
+                                    <th scope="col">Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.SliderId</td>
+                                        <td>@item.Title</td>
+                                        <td>@item.Title2</td>
+                                        <td>@item.Title3</td>
+                                        <td title="@item.Description">@(item.Description.Length > 20 ? item.Description.Substring(0, 20) + "..." : item.Description)</td>
+                                        <td title="@item.Description2">@(item.Description2.Length > 20 ? item.Description2.Substring(0, 20) + "..." : item.Description2)</td>
+                                        <td title="@item.Description3">@(item.Description3.Length > 20 ? item.Description3.Substring(0, 20) + "..." : item.Description3)</td>
+                                        <td><a href="/Slider/DeleteSlider/@item.SliderId" class="btn btn-outline-danger">Sil</a></td>
+                                        <td><a href="/Slider/UpdateSlider/@item.SliderId" class="btn btn-outline-warning">Güncelle</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a href="/Slider/CreateSlider" class="btn btn-outline-primary">Yeni Öne Çıkan Alanı Ekle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

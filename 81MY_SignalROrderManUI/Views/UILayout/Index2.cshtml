@@ -1,0 +1,13 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+@await Component.InvokeAsync("_UIHeaderComponent")
+<body class="sub_page">
+    @RenderBody()
+    @await Component.InvokeAsync("_UIFooterComponent")
+    @await Component.InvokeAsync("_UIScriptComponent")
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿using _81MY_SignalROrderMan.EntityLayer.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _81MY_SignalROrderMan.DataAccessLayer.Abstract
+{
+    public interface IBookingDal : IGenericDal<Booking>
+    {
+        public void ConfirmBookingStatus(int id);
+
+        public void CancelBookingStatus(int id);
+    }
+}
