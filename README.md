@@ -33,7 +33,7 @@ Bu projede değiştirilmesi gereken bazı noktalar olabilir fakat burada asıl a
 
 Projede genel anlamda 2 farklı bölüm bulunmaktadır;
 
-1- Vitrin Paneli: Burada da M&C Restoranınile ilgili olarak firma hakkında bilgilerin, rezervasyon bölümünün, sipariş bölümünün, iletişim bölümünün yer aldığı paneldir.<br/>
+1- Vitrin Paneli: M&C Restoran ile ilgili hakkında, rezervasyon, sipariş, iletişim ve ödeme bölümlerinin yer aldığı paneldir.<br/>
 2- Admin Paneli: Adminler'in giriş yapıp kategoriler, ürünler, rezervasyonlar, iletişim gibi alanlar ile ilgili CRUD (Create, Read, Update, Delete) işlemlerinin yaptığı paneldir.  
 
 
