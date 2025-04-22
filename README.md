@@ -18,6 +18,19 @@ Bu proje, hem back-end hem de front-end tarafında kapsamlı teknolojileri içer
 
 Bu projede değiştirilmesi gereken bazı noktalar olabilir fakat burada asıl amaç Back-end Development anlamında .Net Core ile admin ve vitrin panelli bir sistem kurmaktır. Front-end anlamında düzeltmeler yapılabilir. Ayrıca bu bir eğitim olduğu için tam anlamıyla bir bütünlük kurulmamıştır. Fakat bu eğitimdeki asıl amaç tüm konulardan yola çıkarak tamamen farklı temada bir proje oluşturabilmektir.
 
+### :triangular_flag_on_post:Projede Kullandığım Teknolojiler
+- ASP.NET Core MVC
+- ASP.NET Web API
+- SignalR
+- Entity Framework Core
+- AutoMapper
+- FluentValidation
+- ASP.NET Identity
+- AJAX & jQuery
+- QR Code Generation
+- MailKit (SMTP)
+- RapidAPI
+
 Projede genel anlamda 2 farklı bölüm bulunmaktadır;
 
 1- Vitrin Paneli: Burada da M&C Restoranınile ilgili olarak firma hakkında bilgilerin, rezervasyon bölümünün, sipariş bölümünün, iletişim bölümünün yer aldığı paneldir.<br/>
