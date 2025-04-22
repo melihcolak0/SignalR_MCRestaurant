@@ -47,8 +47,25 @@
                                          <td>${item.name}</td>
                                          <td>${item.phone}</td>
                                          <td>${item.personCount}</td>
-                                         <td>${item.bookDate}</td>
-                                         <td><span class="badge badge-dark">${item.description}</span></td>
+                                         <td>
+                                              ${new Date(item.bookDate).toLocaleString('tr-TR', {
+                                                day: '2-digit',
+                                                month: 'short',
+                                                year: 'numeric',
+                                                hour: '2-digit',
+                                                minute: '2-digit',
+                                                hour12: false
+                                              }).replace(',', ' -')}
+                                         </td>
+                                         <td>
+                                          <span class="badge
+                                            ${item.description === 'Rezervasyon Onaylandı' ? 'badge-success' :
+                                              item.description === 'Rezervasyon Beklemede' ? 'badge-warning' :
+                                              item.description === 'Rezervasyon İptal Edildi' ? 'badge-dark' :
+                                              'badge-secondary'}">
+                                            ${item.description}
+                                          </span>
+                                        </td>
                                          <td><a href="/Booking/DeleteBooking/${item.bookingId}" class="btn btn-outline-danger">Sil</a></td>
                                          <td><a href="/Booking/UpdateBooking/${item.bookingId}" class="btn btn-outline-warning">Güncelle</a></td>
                                          <td><a href="/Booking/ConfirmStatus/${item.bookingId}" class="btn btn-outline-primary">Onayla</a></td>
